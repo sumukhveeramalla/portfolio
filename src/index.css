@@ -1,0 +1,29 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+section {
+  scroll-margin-top: 6rem; /* Fix sticky navbar overlap */
+}
+
+/* index.css or App.css */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
