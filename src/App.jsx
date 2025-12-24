@@ -27,7 +27,14 @@ function App() {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0xffffff,
+        // color: 0xffffff,
+
+        color: 0xaaaaaa,        // 👈 lighter gray instead of pure white
+        backgroundColor: 0x000000,
+
+        points: 8.0,            // 👈 fewer points = fewer lines
+        maxDistance: 18.0,      // 👈 shorter connections
+        spacing: 20.0,          // 👈 more space = less clutter
         backgroundColor: 0x000000,
       });
       setVantaEffect(effect);

@@ -1,99 +1,95 @@
 // src/sections/Projects.jsx
 import { Github, ExternalLink } from "lucide-react";
 
+// src/sections/Projects.jsx
+const projects = [
+  {
+    title: "Bachelor’s Thesis: Skeleton-based Action Recognition",
+    description: (
+      <>
+        Developed a <strong>ConMLP-based model</strong> with encoder–decoder architecture using
+        <strong> Contrastive</strong> and <strong> Reconstruction</strong> losses; achieved
+        <strong> 93.55% accuracy</strong> on the NTU RGB+D dataset using <strong>PyTorch</strong>.
+      </>
+    ),
+    link: "https://github.com/sumukhveeramalla/majorProject/",
+  },
+  {
+    title: "Image Caption Generation",
+    description: (
+      <>
+        Built two pipelines: (1) <strong>Data2Vec + Transformer</strong> (BLEU-1 = 0.51, +8%) and
+        (2) <strong>CNN + Transformer</strong> hybrid for image-to-text generation.
+      </>
+    ),
+    link: "https://github.com/YOUR_USERNAME/image-caption-generation",
+  },
+  {
+    title: "Food Delivery Web App",
+    description: (
+      <>
+        Implemented <strong>browsing</strong>, <strong>cart</strong>, <strong>orders</strong>, and
+        <strong> authentication</strong> using the <strong>MERN stack</strong>.
+      </>
+    ),
+    link: "https://github.com/sumukhveeramalla/Wah-webapp",
+  },
+  {
+    title: "Roko – Distributed LLM Inference Platform",
+    description: (
+      <>
+        Built using <strong>Hedera</strong> and <strong>Petals</strong> for distributed LLM training
+        with crypto-incentives.
+        <br />
+        🥉 <em>Harvard LIVE AI Hackathon Bronze Winner</em>
+      </>
+    ),
+    link: "https://github.com/alpacaswillrule/Roko/",
+  },
+];
+
 const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center px-4 md:px-16 py-24 bg-transparent text-inherit"
+      className="min-h-screen flex flex-col justify-center items-center px-4 md:px-16 py-24"
     >
-      <div className="max-w-3xl w-full">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Projects</h2>
-        <ul className="space-y-10">
+      <div className="max-w-4xl w-full">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+          Projects
+        </h2>
 
-          <li>
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold">
-                Bachelor’s Thesis: Skeleton-based Action Recognition
+        <div className="space-y-8">
+          {projects.map((project, idx) => (
+            <a
+              key={idx}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                block rounded-xl border border-white/10
+                bg-white/5 backdrop-blur-sm
+                p-6 transition-all duration-300
+                hover:border-white/40
+                hover:bg-white/10
+                hover:-translate-y-1
+                hover:shadow-lg hover:shadow-white/10
+                cursor-pointer
+              "
+            >
+              <h3 className="text-xl font-semibold mb-2">
+                {project.title}
               </h3>
-              <a
-                href="https://github.com/sumukhveeramalla/majorProject/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="text-white hover:scale-110 transition" />
-              </a>
-            </div>
-            <p className="mt-2">
-              Developed a <strong>ConMLP-based model</strong> with encoder–decoder architecture using
-              <strong> Contrastive</strong> and <strong> Reconstruction</strong> losses; achieved
-              <strong> 93.55% accuracy</strong> on the NTU RGB+D dataset using <strong>PyTorch</strong>.
-            </p>
-          </li>
-
-          <li>
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold">Image Caption Generation</h3>
-              <a
-                href="https://github.com/YOUR_USERNAME/image-caption-generation"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="text-white hover:scale-110 transition" />
-              </a>
-            </div>
-            <p className="mt-2">
-              Built two pipelines: (1) <strong>Data2Vec + Transformer</strong> (BLEU-1 = 0.51, +8%) and
-              (2) <strong>CNN + Transformer</strong> hybrid for robustness in image-to-text generation tasks.
-            </p>
-          </li>
-
-          <li>
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold">Food Delivery Web App</h3>
-              <a
-                href="https://github.com/sumukhveeramalla/Wah-webapp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="text-white hover:scale-110 transition" />
-              </a>
-            </div>
-            <p className="mt-2">
-              Implemented core functionalities—<strong>browsing</strong>, <strong>cart</strong>, <strong>orders</strong>,
-              and <strong>authentication</strong>—using the <strong>MERN stack</strong>: MongoDB, Express.js, React, and Node.js.
-            </p>
-          </li>
-
-          <li>
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold">Roko – Distributed LLM Inference Platform</h3>
-              <a
-                href="https://github.com/alpacaswillrule/Roko/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="text-white hover:scale-110 transition" />
-              </a>
-              <a
-                  href="https://devpost.com/software/roko-bhtl5p"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="text-white hover:scale-110 transition" />
-                </a>
-            </div>
-            <p className="mt-2">
-              Built using <strong>Hedera</strong> and <strong>Petals</strong>, this platform enables
-              cost-efficient distributed LLM training with crypto-incentives. <br />
-              🥉 <em>Harvard LIVE AI Hackathon Bronze Winner, 2nd Place Blockchain, 3rd Place AI/ML</em>
-            </p>
-          </li>
-
-        </ul>
+              <p className="text-sm md:text-base text-white/90 leading-relaxed">
+                {project.description}
+              </p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 export default Projects;
+
