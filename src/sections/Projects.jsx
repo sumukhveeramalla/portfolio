@@ -4,6 +4,27 @@ import { Github, ExternalLink } from "lucide-react";
 // src/sections/Projects.jsx
 const projects = [
   {
+    title: "Web Recommender System",
+    description: (
+      <>
+        The Web Recommender System is a full-stack, AI-powered movie recommendation platform designed to provide personalized and explainable movie suggestions based on user preferences. The system integrates modern web technologies with large language model–based reasoning to deliver recommendations that are not only accurate, but also transparent and fairness-aware.
+      </>
+    ),
+    link: "https://recommender-d124b.web.app/",
+  },
+  {
+    title: "Roko – Distributed LLM Inference Platform",
+    description: (
+      <>
+        Built using <strong>Hedera</strong> and <strong>Petals</strong> for distributed LLM training
+        with crypto-incentives.
+        <br />
+        🥉 <em>Harvard LIVE AI Hackathon Bronze Winner</em>
+      </>
+    ),
+    link: "https://github.com/alpacaswillrule/Roko/",
+  },
+  {
     title: "Bachelor’s Thesis: Skeleton-based Action Recognition",
     description: (
       <>
@@ -13,6 +34,15 @@ const projects = [
       </>
     ),
     link: "https://github.com/sumukhveeramalla/majorProject/",
+  },
+  {
+    title: "Facial Verificatin using a Siamese Network",
+    description: (
+      <>
+        This project implements a facial verification system using a Siamese neural network, which determines whether two facial images belong to the same person. Instead of classifying faces into fixed identities, the model learns a similarity function by extracting feature embeddings from each image and measuring the distance between them.
+      </>
+    ),
+    link: "https://github.com/sumukhveeramalla/face_verification/"
   },
   {
     title: "Image Caption Generation",
@@ -33,19 +63,9 @@ const projects = [
       </>
     ),
     link: "https://github.com/sumukhveeramalla/Wah-webapp",
-  },
-  {
-    title: "Roko – Distributed LLM Inference Platform",
-    description: (
-      <>
-        Built using <strong>Hedera</strong> and <strong>Petals</strong> for distributed LLM training
-        with crypto-incentives.
-        <br />
-        🥉 <em>Harvard LIVE AI Hackathon Bronze Winner</em>
-      </>
-    ),
-    link: "https://github.com/alpacaswillrule/Roko/",
-  },
+  }
+  
+  
 ];
 
 const Projects = () => {
